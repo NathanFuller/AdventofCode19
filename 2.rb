@@ -1,5 +1,7 @@
 if ARGV.empty?
   computer = File.open("2input.txt", 'r').read.split(',').map{ |x| x.to_i}
+  computer[1] = 12
+  computer[2] = 2
 else
   computer = ARGV.map{ |x| x.to_i}
 end
@@ -17,3 +19,4 @@ while computer[point] != 99 do
 end
 
 print "\n"
+print computer, "\n"
