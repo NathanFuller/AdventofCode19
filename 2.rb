@@ -4,5 +4,16 @@ else
   computer = ARGV.map{ |x| x.to_i}
 end
 
-print computer
 
+point = 0
+while computer[point] != 99 do
+  if computer[point] == 1
+    computer[computer[point+3]] = computer[computer[point+1]] + computer[computer[point+2]]
+  elsif computer[point] == 2
+    computer[computer[point+3]] = computer[computer[point+1]] * computer[computer[point+2]]
+  end
+  point += 4
+  print computer
+end
+
+print "\n"
